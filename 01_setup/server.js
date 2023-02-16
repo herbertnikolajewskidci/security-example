@@ -16,10 +16,13 @@ app.get("/", (req, res) => {
 });
 
 https
-    .createServer({
-        key: fs.readFileSync("key.pem"),
-        cert: fs.readFileSync("cert.pem"),
-    })
+    .createServer(
+        {
+            key: fs.readFileSync("key.pem"),
+            cert: fs.readFileSync("cert.pem"),
+        },
+        app
+    )
     .listen(PORT, () => {
         console.log(`Listening on port ${PORT}...`);
     });
