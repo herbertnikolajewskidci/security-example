@@ -5,6 +5,11 @@ const express = require("express");
 const helmet = require("helmet");
 
 const PORT = 3000;
+const config = {
+    CLIENT_ID:
+        "834957504089-dvq89dqacmgmloqhc8uqahn0lgqmf5cm.apps.googleusercontent.com",
+    CLIENT_SECRET: "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",
+};
 
 const app = express();
 
